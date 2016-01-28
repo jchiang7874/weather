@@ -1,0 +1,140 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Bree Serif', serif;
+}
+
+body {
+    background: url(background.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 20px;
+    background-position: center right;
+}
+
+h1 {
+    text-align: center;
+    font-size: 7vw;
+}
+
+h1, #change_city, input[type=text] {
+    color: rgb(4, 68, 119);
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 25px;
+    color: #ffffff;
+}
+
+#temp {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 9vw;
+}
+
+.info {
+    display: flex;
+}
+
+.iconImg {
+    padding: 0 10px;
+}
+
+.infoBox {
+    padding: 20px 10px;
+    font-size: 2vw;
+    background-color: rgba(179,6,179,0.35);
+    border-radius: 5px;
+    background-color: rgba(179,6,179,0.35);
+    color: rgb(4, 68, 119);
+    //box-shadow: -5px 5px 5px rgba(80,2,80,0.8), 0px -2px 5px rgba(80,2,80,0.8);
+}
+
+#change_city, #input_field {
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+#change_city:hover {
+    color: #ffffff;
+}
+
+#input_field.hide {
+    visibility: hidden;
+}
+
+#input_field.show {
+    visibility: visible;
+}
+
+input[type=text] {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: inset -2px 2px 5px #9E9E9E, inset 2px -2px 5px #9E9E9E;
+}
+
+
+input[type=text], button {
+    border: none;
+}
+
+button {
+    box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
+    background:-moz-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+    background:-webkit-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+    background:-o-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+    background:-ms-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+    background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0',GradientType=0);
+    background-color:#3d94f6;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #337fed;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #1570cd;
+}
+button:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6));
+    background:-moz-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+    background:-webkit-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+    background:-o-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+    background:-ms-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+    background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6',GradientType=0);
+    background-color:#1e62d0;
+}
+button:active {
+    position:relative;
+    top:1px;
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+   .info {
+       width: 100%;
+       display: block;
+   }
+}
+

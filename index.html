@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <section>
+        <h1>Current Weather Watcher</h1>
+        <article>
+            <div id="temp"></div>
+        </article>
+        <article>
+            <div class="info">
+                <img src="map.png" alt="temp icon" class="iconImg"/>
+                <span id="city" class="infoBox"></span>
+            </div>
+            <div class="info">
+                <img src="#" alt="temp icon" id="icon" class="iconImg"/>
+                <span id="description" class="infoBox"></span>
+            </div>
+            <div class="info">
+                <img src="wind.png" alt="temp icon" class="iconImg"/>
+                <span id="wind" class="infoBox"></span>
+            </div>
+        </article>
+
+        <span id="change_city">Or click to change current city</span>
+
+        <div id="input_field" class="hide">
+            <input type="text" id="user_input" placeholder="City, State"/>
+            <button type="submit" id="go">Go</button>
+        </div>
+
+    </section>
+
+    <script src="http://maps.googleapis.com/maps/api/js?"></script>
+    <script src="script.js"></script>
+</body>
+</html>
