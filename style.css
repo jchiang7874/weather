@@ -55,6 +55,12 @@ article {
     //box-shadow: -5px 5px 5px rgba(80,2,80,0.8), 0px -2px 5px rgba(80,2,80,0.8);
 }
 
+
+#change_city {
+    margin-top: 20px;
+    text-align: center;
+}
+
 #change_city, #input_field {
     margin-left: 60px;
     cursor: pointer;
@@ -69,6 +75,7 @@ article {
 }
 
 #input_field.show {
+    margin-top: 20px;
     visibility: visible;
 }
 
@@ -83,6 +90,7 @@ input[type=text] {
 
 input[type=text], button {
     border: none;
+    outline: none;
 }
 
 button {
@@ -124,17 +132,15 @@ button:active {
     top:1px;
 }
 
-/* ----------- iPhone 6+ ----------- */
+@media (max-width: 523px){
+    article:nth-child(3) {
+        display: inline-block;
+        flex-wrap: wrap;
+        margin: 0 25%;
+    }
+    .info {
+        margin: 10px;
+    }
 
-/* Portrait and Landscape */
-
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3) {
-   .info {
-       width: 100%;
-       display: block;
-   }
 }
 
