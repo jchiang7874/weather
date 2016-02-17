@@ -77,6 +77,12 @@ h2, #input_field {
     justify-content: center;
     margin-top: -30px;
 }
+#info_content {
+    visibility: hidden;
+}
+#info_content.show {
+    visibility: visible;
+}
 
 .info {
     display: inline-block;

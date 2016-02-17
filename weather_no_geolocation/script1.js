@@ -12,6 +12,20 @@ var cityName = document.getElementById("city"),
     tempIcon = document.getElementById("icon"),
     windSpeed = document.getElementById("wind");
 
+
+$("#go").click(function (){
+    $("user_input").focus();
+    eventListener();
+    showImgs();
+});
+
+$("#user_input").keypress(function(e) {
+    if(e.keyCode == 13) {
+        eventListener();
+        showImgs();
+    }
+});
+
 ///City
 
 function weatherData(lat, lng) {
@@ -20,31 +34,24 @@ function weatherData(lat, lng) {
 
     if(lat != undefined && lng != undefined) {
         var apiUrl = url + "lat=" + lat + "&lon=" + lng + "&units=imperial" + appId;
-        //console.log(apiUrl);
+        console.log(apiUrl);
         dataInfo(apiUrl);
     }
 }
 
 function eventListener() {
     var cityState = $("#user_input").val();
+    if (cityState.charAt(cityState.length-3) == " ") {
     var cityApiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityState + "&units=imperial" + "&APPID=08476c9cf2256da6c859372f3d474f8f";
 
     cityName.innerText = cap(cityState);
 
-    dataInfo(cityApiUrl);
+     dataInfo(cityApiUrl);
+    } else {
+        alert('Please enter city, state');
+    }
     $("#user_input").attr("placeholder", "City, State").val("");
 }
-
-$("#go").click(function (){
-    $("user_input").focus();
-    eventListener();
-});
-
-$("#user_input").keypress(function(e) {
-    if(e.keyCode == 13) {
-        eventListener();
-    }
-});
 
 function dataInfo (url) {
     $.get(url, function( data ) {
@@ -89,6 +96,7 @@ function cap(name) {
     } return completeName.join(" ");
 }
 
+//Input box
 
 $('#user_input').on({
     'mouseenter': function() {
@@ -98,6 +106,13 @@ $('#user_input').on({
         $('#user_input').attr('placeholder', 'city, state');
     }
 })
+
+
+//Show info_content
+
+function showImgs() {
+    $("#info_content").addClass("show");
+}
 
 
 
